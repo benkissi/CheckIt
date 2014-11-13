@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_name: MyString
+  manufacturer: MyString
+  distributer: MyString
+  expiry_date: 2014-11-11
+  manufacturing_date: 2014-11-11
+  description: MyText
+  fda_approved: MyString
+  gsa_approved: MyString
+
+two:
+  product_name: MyString
+  manufacturer: MyString
+  distributer: MyString
+  expiry_date: 2014-11-11
+  manufacturing_date: 2014-11-11
+  description: MyText
+  fda_approved: MyString
+  gsa_approved: MyString

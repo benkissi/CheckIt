@@ -1,0 +1,12 @@
+<h1>Do Not Compromise on Quality</h1>
+
+
+<%= form_for("",:url => welcome_input_path, :method => "get") do |f| %>
+
+<div class="field">
+  <%= f.label "Enter Scratch Code"%><br>
+  <%= f.text_field :input %>
+  <%= f.submit "CHECK"%>
+</div>
+
+<%end%>

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product name:</strong>
+  <%= @product.product_name %>
+</p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @product.manufacturer %>
+</p>
+
+<p>
+  <strong>Distributer:</strong>
+  <%= @product.distributer %>
+</p>
+
+<p>
+  <strong>Expiry date:</strong>
+  <%= @product.expiry_date %>
+</p>
+
+<p>
+  <strong>Manufacturing date:</strong>
+  <%= @product.manufacturing_date %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>Fda approved:</strong>
+  <%= @product.fda_approved %>
+</p>
+
+<p>
+  <strong>Gsa approved:</strong>
+  <%= @product.gsa_approved %>
+</p>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
