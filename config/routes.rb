@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :admins
   get 'welcome/index'
   get 'welcome/input'
+  get 'welcome/check'
 
   resources :products
   resources :admins
