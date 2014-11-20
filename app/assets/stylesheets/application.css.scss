@@ -20,9 +20,62 @@
 #check
 {
    /*margin-top: 400px;*/
-   display: inline-block;
    
+   background: rgba(0,0,0,0.5);
+   border-radius: 20px;
+   position: absolute;
+   top: 0;
+   left: 7%;
 }
+
+.white
+{
+	color:white;
+}
+.check-main
+{
+	width: 100%;
+	height: 100%;
+
+	img {
+		width: 100%;
+	}
+}
+
+#check-content
+{
+	width: 45%;
+	margin-top: 150px;
+	/*margin-bottom: 10px;*/
+	margin-left: auto;
+	margin-right: auto;
+}
+.login
+{
+	color:black;
+	font-weight: bold;
+	margin-left: auto;
+	margin-right: auto;
+	width:200px;
+	
+}
+.login-bg
+{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.2);
+	height: 100vh;
+	padding:20px;
+}
+#login-bg1
+{
+	width: 300px;
+	height: 300px;
+	margin-top: 110px;
+	border-radius: 3%;
+	background-color: rgba(0,0,0,0.7);
+}
+
 .bar
 {
    display: block;
@@ -72,10 +125,7 @@
 	margin-left: 17px;
 	margin-top: 13px;
 }
-.tablee
-{
-	padding: 20px;
-}
+
 #head-move
 {
 	margin-top: 5px;
@@ -86,9 +136,104 @@
 	margin: 0 auto;
 }
 
+.f-content
+{
+	height: 100vh;
+	height: 400px;
+	margin-top: 200px;
+	color: black;
+}
 .form-content
 {
-	padding-top: 100px;
 	height: 100vh;
 	margin-top: 50px;
+	color: black;
+}
+
+.form-center th
+	{
+		text-align: center;	
+	}
+
+.button
+{
+	background-color: #FF8C00;
+	border-radius: 5px;
+	font-weight: normal;
+	color: white;
+	font-size: 20px;
+	background-size: 20px;
+	padding: 5px;
+    
+    &:hover
+    {
+    	opacity:0.8;
+    	color: white;
+    	text-decoration: none;
+    	background-color: #FF8C00;
+    }
+    .button-small
+    {
+    	background-color: #FF8C00;
+	    border-radius: 5px;
+	    font-weight: normal;
+	    color: white;
+	    font-size: 20px;
+	    background-size: 20px;
+	    padding: 5px;
+    }
+}
+.table-pad
+{
+	padding: 15px;
+}
+.bg-opaq
+{
+	background-color: #777;
+	opacity: 0.6;
+	margin: 7px;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+}
+.margin-top
+{
+	margin-top: 100px;
+	
+}
+.full-screen
+{
+	height:100vh;
+	display: inline-block;
+	height: 100%;
+}
+.padding
+{
+	padding: 20px;
+}
+.abs
+{
+	position: absolute;
+}
+
+.table-bg1
+{
+	width: 100%;
+	height: 100vh;
+    margin-top: 80px;
+	border-radius: 0%;
+	background-color: rgba(0,0,0,0.2);
+}
+.table-bg2
+{
+	width: 100%;
+	height: 500px;
+	margin-top: 20px;
+	border-radius: 2%;
+	background-color: rgba(0,0,0,0.7);
+} 
+.table-back
+{
+	background: white;
 }

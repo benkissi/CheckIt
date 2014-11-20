@@ -1,5 +1,7 @@
-<div class= "container-fluid form-content">
-<=% image_tag @product.image.url(:medium)%>
+<div class= "container-fluid ">
+
+<div class="row col-lg-12">
+ <div class="form-content col-lg-6">
 <p>
   <strong>Product name:</strong>
   <%= @product.product_name %>
@@ -39,8 +41,15 @@
   <strong>Gsa approved:</strong>
   <%= @product.gsa_approved %>
 </p>
-
+ 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+  </div>
+
+  <div class="col-lg-6 form-content">
+    <%= image_tag @product.image.url(:medium)%>
+  </div>
+
+</div>
 </div>
 
