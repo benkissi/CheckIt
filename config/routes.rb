@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'codes/index'
+
   devise_for :admins
   get 'welcome/index'
   get 'welcome/input'
