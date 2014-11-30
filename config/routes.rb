@@ -1,19 +1,35 @@
 Rails.application.routes.draw do
-  get 'codes/index'
 
   devise_for :admins
   get 'welcome/index'
   get 'welcome/input'
   get 'welcome/check'
 
-  resources :products
-  resources :admins
+  resources :admins 
+  resources :products 
+  resources :codes
+  resources :reports
+  
+  get 'codes/generate/:id' => 'codes#generate', :as => "codes_generate"
+  get 'welcome/verified' => 'welcome#verified'
+  get 'welcome/not_verified/:id' => 'welcome#not_verified', :as => "welcome_not_verified"
+  get 'codes/index'
+  get 'reports/create' => 'reports#create'
+  get 'welcome/about' => 'welcome#about', :as => "welcome_about"
+
+  
+
+  
+
+  
+
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  root 'welcome#index' 
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

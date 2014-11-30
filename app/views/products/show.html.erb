@@ -1,55 +1,59 @@
 <div class= "container-fluid ">
+  <div class="row col-lg-12 margin-top">
+    <div class="note">
+      <%= content_tag :div, flash[:notice], class: "notice" %>
+    </div>
 
-<div class="row col-lg-12">
- <div class="form-content col-lg-6">
-<p>
-  <strong>Product name:</strong>
-  <%= @product.product_name %>
-</p>
+    <div class="form-content col-lg-6">
+      <p>
+        <strong>Product name:</strong>
+        <%= @product.product_name %>
+      </p>
 
-<p>
-  <strong>Manufacturer:</strong>
-  <%= @product.manufacturer %>
-</p>
+      <p>
+        <strong>Manufacturer:</strong>
+        <%= @product.manufacturer %>
+      </p>
 
-<p>
-  <strong>Distributer:</strong>
-  <%= @product.distributer %>
-</p>
+      <p>
+        <strong>Distributer:</strong>
+        <%= @product.distributer %>
+      </p>
 
-<p>
-  <strong>Expiry date:</strong>
-  <%= @product.expiry_date %>
-</p>
+      <p>
+        <strong>Expiry date:</strong>
+        <%= @product.expiry_date %>
+      </p>
 
-<p>
-  <strong>Manufacturing date:</strong>
-  <%= @product.manufacturing_date %>
-</p>
+      <p>
+        <strong>Manufacturing date:</strong>
+        <%= @product.manufacturing_date %>
+      </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+      <p>
+        <strong>Description:</strong>
+        <%= @product.description %>
+      </p>
 
-<p>
-  <strong>Fda approved:</strong>
-  <%= @product.fda_approved %>
-</p>
+      <p>
+        <strong>Fda approved:</strong>
+        <%= @product.fda_approved %>
+      </p>
 
-<p>
-  <strong>Gsa approved:</strong>
-  <%= @product.gsa_approved %>
-</p>
- 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+      <p>
+        <strong>Gsa approved:</strong>
+        <%= @product.gsa_approved %>
+      </p>
+
+      <P><%= link_to 'Edit', edit_product_path(@product) %>
+        <%= link_to 'Back', products_path %></p><br><br>
+
+        <p><%= button 'Generate Code', codes_generate_path(@product) %></p>
+      </div>
+
+      <div class="col-lg-6 form-content">
+        <%= image_tag @product.image.url(:medium)%>
+      </div>
+    </div>
   </div>
-
-  <div class="col-lg-6 form-content">
-    <%= image_tag @product.image.url(:medium)%>
-  </div>
-
-</div>
-</div>
 

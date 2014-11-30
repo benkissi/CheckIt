@@ -1,0 +1,75 @@
+<div class="check-main">
+	<img src="/assets/Man_consults_with_pharmacist_(1).jpg">
+</div>
+
+
+	<div class="f-content container" id="check">
+		<div id="check-content">
+			<%= form_for("",:url => welcome_input_path, :method => "get") do |f| %>  
+	    	<h1 class="white">Do Not Compromise on Quality</h1>
+	    	<%= f.label "Enter Scratch Code", :class => 'white text-center'%><br>
+	    	<%= f.text_field :input, input_html: { value: '' } %>
+	    	<%= f.submit "CHECK"%>
+			<%end%>
+		</div>
+	</div>
+
+	<div class="container verification ">
+		<div class="row col-lg-12 ver-content" style="margin-top:5%;">
+			<div class=" col-lg-6">
+			    <p style="font-size:30px; font-weight:bolder; color:#FF8C00">Product is Original</p>
+
+				<p>
+				  <strong>Product name:</strong>
+				  <%= @product.product_name %>
+				</p>
+
+				<p>
+				  <strong>Manufacturer:</strong>
+				  <%= @product.manufacturer %>
+				</p>
+
+				<p>
+				  <strong>Distributer:</strong>
+				  <%= @product.distributer %>
+				</p>
+
+				<p>
+				  <strong>Expiry date:</strong>
+				  <%= @product.expiry_date %>
+				</p>
+
+				<p>
+				  <strong>Manufacturing date:</strong>
+				  <%= @product.manufacturing_date %>
+				</p>
+
+				<p>
+				  <strong>Description:</strong>
+				  <%= @product.description %>
+				</p>
+
+				<p>
+				  <strong>Fda approved:</strong>
+				  <%= @product.fda_approved %>
+				</p>
+
+				<p>
+				  <strong>Gsa approved:</strong>
+				  <%= @product.gsa_approved %>
+				</p>
+				<%= button 'Back', welcome_check_path%>
+				</div>
+				<div class="col-lg-4 check-image">
+	    			<%= image_tag @product.image.url(:medium)%>
+	  			</div>
+	  			
+			    </div>
+
+	</div>
+
+ <script>
+ $(function() {
+ 	$('#footer').removeClass("top-space");
+ });
+ </script>

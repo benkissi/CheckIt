@@ -1,0 +1,44 @@
+<div class= "container-fluid ">
+<div class="row col-lg-12 margin-top">
+<div class="note">
+</div>
+
+ <div class="form-content col-lg-6">
+<p>
+  <strong>Pharmacy name:</strong>
+  <%= @report.pharmacy_name %>
+</p>
+
+<p>
+  <strong>Pharmacy location:</strong>
+  <%= @report.pharmacy_location %>
+</p>
+
+<p>
+  <strong>Pharmacy landmark:</strong>
+  <%= @report.additional_info %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @report.number %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @report.email %>
+</p>
+
+<p>
+  <strong>Created:</strong>
+  <%= @report.created_at %>
+</p>
+<%= link_to 'Back', reports_path %>
+  </div>
+
+
+      
+
+</div>
+</div>
+

@@ -1,0 +1,80 @@
+
+
+<div class="check-main">
+	<img src="/assets/Man_consults_with_pharmacist_(1).jpg">
+</div>
+
+
+<div class="f-content container" id="check">
+	<div id="check-content">
+		<%= form_for("",:url => welcome_input_path, :method => "post") do |f| %>  
+		<h1 class="white">Do Not Compromise on Quality</h1>
+		<%= f.label "Enter Scratch Code", :class => 'white text-center'%><br>
+		<%= f.text_field :input, input_html: { value: '' } %>
+		<%= f.submit "CHECK"%>
+		<%end%>
+	</div>
+</div>
+<div class="container  verification ">
+	
+	<%= form_for(:report, :url => reports_path(@report)) do |f| %>
+	<div class="row" id="f-notice">
+		<p style="font-size:30px; font-weight:bolder; color:#FF8C00">Product is fake</p>
+	</div>
+	<div class="row">
+		<div class="col-lg-5  ver-content">
+
+			<br>
+			<p style="font-size:20px; font-weight:bold; color:white;">Make a Report</p>
+			<%= f.label :Name_of_Pharmacy, :class => 'control-label'%><br>
+			<div class="controls">
+				<%= f.text_field :pharmacy_name, input_html: { value: '' },:class => 'form-control', :required => true %>
+			</div> 
+
+<div class="controls" style="color:black;margin-top:2%;">
+         <p> <%= f.label :Select_product_name, :class => 'control-label'%>  <%#= collection_select(:reports, :product_id, @pro,  :id, :product_name, {:prompt => false})%> <%= select_tag "product_id", options_from_collection_for_select(@pro, "id", "product_name"), include_blank: true %></p>
+</div>
+
+
+
+			<%= f.label :Pharmacy_Location, :class => 'control-label'%> <br>
+			<div class="field">
+				<%= f.text_field :pharmacy_location, :class => 'form-control', required: true%>
+			</div>
+			<%= f.label :Pharmacy_Landmark, :class => 'control-label'%> <br>
+			<div class="field">
+				<%= f.text_field :pharmacy_landmark, :class => 'form-control', required: true %>
+			</div>
+			<%= button 'Back', welcome_check_path%>
+		</div>
+
+		<div class="col-lg-5" id="report">
+
+
+			<%= f.label :Addtional_Information, :class => 'control-label'%> <br>
+			<div class="field">
+				<%= f.text_field :additional_info, :class => 'form-control', required: true %>
+			</div>
+			<%= f.label :Your_Number, :class => 'control-label'%> <br>
+			<div class="field">
+				<%= f.text_field :number, :class => 'form-control'%>
+			</div>
+			<%= f.label :Your_Email,:class => 'control-label'%> <br>
+			<div class="field">
+				<%= f.text_field :email,:class => 'form-control',required: true%>
+			</div>
+			<div class="actions">
+				<%= f.submit "Submit Report", :class => 'button' %>
+			</div> 
+
+		</div>
+	</div>
+	<%end%>
+
+</div>
+
+<script>
+	$(function() {
+		$('#footer').removeClass("top-space");
+	});
+</script>

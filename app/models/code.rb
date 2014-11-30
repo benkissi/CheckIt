@@ -1,4 +1,5 @@
 class Code < ActiveRecord::Base
- belongs_to :admin
- belongs_to :product
-end
+  belongs_to :product
+  belongs_to :admin
+  validates :code, :presence => true, :uniqueness => true
+end  
