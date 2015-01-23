@@ -228,10 +228,12 @@
 .table-bg1
 {
 	width: 100%;
-	height: 100vh;
+	height: 100%;
     margin-top: 80px;
+    margin-bottom: 0%;
 	border-radius: 0%;
 	background-color: rgba(0,0,0,0.2);
+	display:inline-block;
 }
 .table-bg2
 {
@@ -277,7 +279,6 @@
 
 .ver-content {
     color:white;
-    
     margin-bottom: auto;
 	font-weight: bolder;
 	padding-top: 0%;
@@ -305,4 +306,13 @@
 	margin-bottom: 0%;
 	padding-bottom: 0%;
 	margin-left: 7%; 
+}
+.space
+{
+	line-height: 1.2em;
+}
+
+.log
+{
+	display: inline-block;
 }

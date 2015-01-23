@@ -1,14 +1,22 @@
 Rails.application.routes.draw do
 
+ 
+
+  # devise_for :manufacturer
   devise_for :admins
+
+  resources :products 
+  resources :codes
+  resources :reports
+
+  get 'analytics/show'
   get 'welcome/index'
   get 'welcome/input'
   get 'welcome/check'
 
-  resources :admins 
-  resources :products 
-  resources :codes
-  resources :reports
+  # resources :manufacturers
+  #resources :admins 
+
   
   get 'codes/generate/:id' => 'codes#generate', :as => "codes_generate"
   get 'welcome/verified' => 'welcome#verified'
@@ -16,9 +24,9 @@ Rails.application.routes.draw do
   get 'codes/index'
   get 'reports/create' => 'reports#create'
   get 'welcome/about' => 'welcome#about', :as => "welcome_about"
-
-  
-
+  devise_for :manufacturers do
+  get '/manufacturers /sign_out' => 'devise/sessions#destroy'
+end
   
 
   

@@ -17,13 +17,14 @@ class CodesController < ApplicationController
 	# end
 
 	def generate
+		@input = params[:input]
 		@product = Product.find(params[:id])
 		#@code = @product.codes.build(params[:code])
 		#@code.code = SecureRandom.hex(6)
-		
-		if @code = @product.codes.create!(:code => SecureRandom.hex(6))
-		flash[:notice] = "Code was successfully created."
-		redirect_to product_url(@product)
+
+		    if @code = @product.codes.create!(:code => SecureRandom.hex(6))
+		    flash[:notice] = "Code was successfully created."}
+		    redirect_to product_url(@product)
             
         else
         flash[:notice] = "Code could not be created."

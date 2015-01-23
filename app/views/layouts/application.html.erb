@@ -60,6 +60,7 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
+				<li style="color:#FF6100;"><%= content_tag :div, flash[:notice], class: "notice" %></li>
 					<li><%=link_to "Home", root_path %></li>
 					<li><%=link_to "About", welcome_about_path %></li>
 					<li class="dropdown">
@@ -72,7 +73,7 @@
 					<p class="navbar-text pull-right">
 
 					<li><a href="contact.html">Contact</a></li>
-					<li><a id="up"class="btn" bg-color="red" href="signin.html">SIGN IN / SIGN UP</a></li>
+					<li><a id="up"class="btn" bg-color="red" href="/analytics/show">SIGN IN / SIGN UP</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>

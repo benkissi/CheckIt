@@ -1,23 +1,23 @@
 <div class="check-main">
-	<img src="/assets/Man_consults_with_pharmacist_(1).jpg">
+	<img src="/assets/man.jpg">
 </div>
 
 
-	<div class="f-content container" id="check">
+<div class="f-content container" id="check">
 	<div style="color:#FF8C00; font-weight:bold; margin-left:40%; margin-right:auto; font-size:20px;"><%= content_tag :div, flash[:notice], class: "notice" %></div>
-		<div id="check-content">
-			<%= form_for("",:url => welcome_input_path, :method => "get") do |f| %>  
-	    	<h1 class="white">Do Not Compromise on Quality</h1>
-	    	<%= f.label "Enter Scratch Code", :class => 'white text-center'%><br>
-	    	<%= f.text_field :input, input_html: { value: '' } %>
-	    	<%= f.submit "CHECK"%>
-			<%end%>
-		</div>
+	<div id="check-content">
+		<%= form_for("",:url => welcome_input_path, :method => "get") do |f| %>  
+		<h1 class="white">Do Not Compromise on Quality</h1>
+		<%= f.label "Enter Scratch Code", :class => 'white text-center'%><br>
+		<%= f.text_field :input, input_html: { value: '' } %>
+		<%= f.submit "CHECK"%>
+		<%end%>
 	</div>
-	
+</div>
 
- <script>
- $(function() {
- 	$('#footer').removeClass("top-space");
- });
- </script>
+
+<script>
+	$(function() {
+		$('#footer').removeClass("top-space");
+	});
+</script>

@@ -11,12 +11,14 @@ class WelcomeController < ApplicationController
 		@code = Code.find_by(params[code: :@input])
 		@product= @code.product
 
-		if Code.exists?(:code => @input)
-			flash[:notice] = "Product is original."
-			render :verified
+		respond to do |format|
+		    if Code.exists?(:code => @input)
+			format.html {render :verified}
+			format.json {render :verified}
 		# redirect_to welcome_verified_path(@code)
 		else
-			redirect_to welcome_not_verified_path(@code)
+			format.html {redirect_to welcome_not_verified_path(@code)}
+			format.json {render json: welcome_not_verified_path(@code)}
 		end
 	end
 
