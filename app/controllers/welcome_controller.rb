@@ -16,10 +16,11 @@ class WelcomeController < ApplicationController
 			format.html {render :verified}
 			format.json {render :verified}
 		# redirect_to welcome_verified_path(@code)
-		else
+		    else
 			format.html {redirect_to welcome_not_verified_path(@code)}
 			format.json {render json: welcome_not_verified_path(@code)}
-		end
+		    end
+	    end
 	end
 
 	def verified
